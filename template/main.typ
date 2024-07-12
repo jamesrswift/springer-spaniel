@@ -71,8 +71,8 @@ however, for multiline equations we recommend to use the `eqnarray` environment.
 $
 abs(gradient_alpha^mu (y)) & <= 1/(d - a) integral abs(gradient 1/( abs(𝜉 - y)^(d-alpha))) dd(mu (𝜉))
                           = integral 1 / (abs(𝜉 - y)^(d-alpha+1))  dd(mu (𝜉))\
-                        & = (d - alpha + 1) integral _d(y)^infinity (mu(B(y,r)))/(r^(d-alpha+2)) dd(r)
-                          <= (d-alpha + 1) integral^infinity_d(y) (r^(d-alpha))/(r^(d-alpha+2)) dd(r)
+                        & = (d - alpha + 1) limits(integral) _d(y)^infinity (mu(B(y,r)))/(r^(d-alpha+2)) dd(r)
+                          <= (d-alpha + 1) limits(integral)^infinity_d(y) (r^(d-alpha))/(r^(d-alpha+2)) dd(r)
 $
 
 == Subsection Heading <sec:2.1>
