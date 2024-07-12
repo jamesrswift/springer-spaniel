@@ -68,11 +68,12 @@
   
   set figure.caption(position: bottom)
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.caption: (it) => {
-    set par(first-line-indent: 0em)
-    align(left)[*#it.supplement #it.counter.display()*#it.separator;#it.body]
-  }
-
+  show figure.caption: set align(left)
+  show figure.caption: set par(first-line-indent: 0em)
+  // show figure.caption: (it) => [
+  //   *#it.supplement #it.counter.display()*#it.separator;#it.body
+  // ]
+  
   show table: set text(size: 8pt)
 
   // --------------------------------------------------------------------------

@@ -212,5 +212,10 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(120)
 
+= Subsection Heading
+If you want to list definitions or the like we recommend to use the enhanced `description` environment -- it will automatically rendered in line with the preferred layout
+
+/ Type 1: That addresses central themes pertainng to migration, health, and disease. In @sec:2, Wilson discusses the role of human migration in infectious disease distributions and patterns.
+/ Type 2: That addresses central themes pertainng to migration, health, and disease. In @sec:2, Wilson discusses the role of human migration in infectious disease distributions and patterns.
 #pagebreak()
 #bibliography("sample.bib", style: "springer-mathphys")
