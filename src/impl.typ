@@ -63,7 +63,7 @@
   // Figures
   set figure(supplement: [Fig.])
   set figure(placement: auto, gap: 1em)
-  show figure.where(placement: auto): set place(clearance: 1em)
+  show figure.where(placement: auto): set place(clearance: 1.5em)
   show figure.where(kind: table): set figure(supplement: [Table])
   
   set figure.caption(position: bottom)
@@ -72,6 +72,8 @@
     set par(first-line-indent: 0em)
     align(left)[*#it.supplement #it.counter.display()*#it.separator;#it.body]
   }
+
+  show table: set text(size: 8pt)
 
   // --------------------------------------------------------------------------
   // Lists
@@ -104,7 +106,7 @@
   {
     block(text(authors.map(it=>it.name).join(", ", last: " and ")))
   }
-  v(4cm)
+  v(3.5cm)
   if (abstract != none){
     strong[Abstract]
     abstract
@@ -119,13 +121,13 @@
       set text(size: 7.5pt)
       set par(first-line-indent: 0em)
       line(length: 25%, stroke: 0.75pt)
-      set block(below: 1.5em)
+      show par: set block(below: 1.5em)
 
       authors.map(
         (it)=>{
           it.name
           linebreak()
-          [#it.institute, #it.address, email: #raw(lang: none, it.email)]
+          [#it.institute, #it.address, email: #link("mailto:" + it.email)]
         }
       ).join(parbreak())
     }

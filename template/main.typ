@@ -83,7 +83,7 @@ Instead of simply listing headings of different levels we recommend to let every
 ]
 
 === Subsubsection Heading
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.1, see also @fig:full
+Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.1, see also @fig:full.
 #footnote[
   If you copy text passages, figures, or tables from other works, you must obtain _permission_ from the copyright holder (usually the original publisher). Please enclose the signed permission with the manuscript. The sources permission to print must be acknowledged either in the captions, as footnotes or in a separate section of the book.
 ]
@@ -99,10 +99,10 @@ Please note that the first line of text that follows a heading is not indented, 
 
 For typesetting numbered lists we recommend to use the enumerate environment -- it will automatically rendered in line with the preferred layout.
 
-1. Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
++ Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
   + Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
   + Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
-2. Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
++ Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
 
 ===== Subparagraph Heading
 In order to avoid simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Use the LATEX automatism for all your cross-references and citations as has already been described in @sec:2, see
@@ -145,11 +145,11 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(50)
 
-#info[Hello World]
-
 #lorem(50)
 
 #lorem(75)
+
+#info[Hello World]
 
 #figure(
   caption: [Please write your table caption here],
@@ -181,7 +181,7 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
       (
         class: [Translation],
         subclass: [mRNA] + springer-spaniel.dining-table.note.make[Table foot note (with suberscript)],
-        length: [22 (19--25)],
+        length: [22 (19---25)],
         mechanism: [Translation repression, mRNA cleavage]
       ),
       (
@@ -193,13 +193,13 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
       (
         class: [Translation],
         subclass: [mRNA],
-        length: [21],
+        length: [21---22],
         mechanism: [mRNA cleavage]
       ),
       (
         class: [Translation],
         subclass: [mRNA],
-        length: [21],
+        length: [22---24],
         mechanism: [Histone and DNA modification]
       ),
     )
@@ -208,6 +208,9 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(40)
 
+#springer-spaniel.asterism.paragraph
+
 #lorem(120)
 
+#pagebreak()
 #bibliography("sample.bib", style: "springer-mathphys")
