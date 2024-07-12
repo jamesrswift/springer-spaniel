@@ -70,6 +70,7 @@
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.caption: set align(left)
   show figure.caption: set par(first-line-indent: 0em)
+  show figure: set align(left)
   // show figure.caption: (it) => [
   //   *#it.supplement #it.counter.display()*#it.separator;#it.body
   // ]
