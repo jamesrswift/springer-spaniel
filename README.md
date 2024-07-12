@@ -1,30 +1,15 @@
 # The `springer-spaniel` Package
 <div align="center">Version 0.1.0</div>
 
-A short description about the project and/or client.
+This is an loose recreation of the _Springer Contributed Chapter_ LaTeX template on Overleaf. It aims to provide template-level support for commonly used packages so you don't have to choose between style and features. 
 
 ## Media
 
 <p align="center">
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Light" src="./thumbnails/1.png" width="45%" style="border: 1px solid #555;">
+  <img alt="Light" src="./thumbnails/1.png" width="32%">
+  <img alt="Dark" src="./thumbnails/2.png" width="32%">
+  <img alt="Light" src="./thumbnails/3.png" width="32%">
 </p>
-<p align="center">
-<img alt="Dark" src="./thumbnails/2.png" width="45%" style="border: 1px solid #555;">
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Light" src="./thumbnails/3.png" width="45%" style="border: 1px solid #555;">
-</p>
-<p align="center">
-  <img alt="Dark" src="./thumbnails/4.png" width="45%" style="border: 1px solid #555;">
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="./thumbnails/5.png" width="45%" style="border: 1px solid #555;">
-</p>
-<p align="center">
-  <img alt="Dark" src="./thumbnails/6.png" width="45%" style="border: 1px solid #555;">
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="./thumbnails/7.png" width="45%" style="border: 1px solid #555;">
-</p>
-
 
 
 ## Template adaptation checklist

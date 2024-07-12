@@ -1,4 +1,4 @@
-#import "@local/springer-spaniel:0.1.0" as springer-spaniel
+#import "@preview/springer-spaniel:0.1.0" as springer-spaniel
 #import springer-spaniel.ctheorems: *
 #import springer-spaniel.gentle-clues: *
 
@@ -145,8 +145,6 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(50)
 
-#springer-spaniel.asterism.paragraph
-
 #lorem(50)
 
 #lorem(75)
@@ -209,6 +207,8 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 )
 
 #lorem(40)
+
+#springer-spaniel.asterism.paragraph
 
 #lorem(120)
 
