@@ -39,6 +39,8 @@
 
   set figure(supplement: [Fig.])
 
+  v(2cm)
+
   // Title
   { 
     set text(weight: "black", size: 16pt)
