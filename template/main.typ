@@ -22,16 +22,9 @@
       email: "name@email.address"
     )
   ),
-  abstract: {
-    lorem(75)
-    parbreak()
-    lorem(75)
-  },
-  // abstract: [
-  //   Each chapter should be preceded by an abstract (no more than 200 words) that summarizes the content. The abstract will appear online at #box[www.SpringerLink.com] and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter.
-
-  //   Please use the `starred` version of the abstract command for typesetting the text of the online abstracts (cf. source file of this chapter template abstract) and include them with the source files of your manuscript. Use the plain abstract command if the abstract is also to appear in the printed version of the book.
-  // ]
+  abstract: lorem(75),
+  // debug: true,
+  frame: 1pt
 )
 
 = Section Heading
@@ -224,5 +217,8 @@ If you want to list definitions or the like we recommend to use the enhanced `de
 
 / Type 1: That addresses central themes pertainng to migration, health, and disease. In @sec:2, Wilson discusses the role of human migration in infectious disease distributions and patterns.
 / Type 2: That addresses central themes pertainng to migration, health, and disease. In @sec:2, Wilson discusses the role of human migration in infectious disease distributions and patterns.
+
+
+
 #pagebreak()
 #bibliography("sample.bib", style: "springer-mathphys")

@@ -1,12 +1,53 @@
 
 #import "package/ctheorems.typ": thmrules
 #import "package/gentle-clues.typ": gentle-clues
+#import "@preview/chromo:0.1.0": square-printer-test, gradient-printer-test, circular-printer-test, crosshair-printer-test
 
 #let template(
   title: [Contribution Title],
   authors: (),
-  abstract: none
+  abstract: none,
+  debug: false,
+  printer-test: false,
+  frame: none
 ) = (body) => {
+
+  // --------------------------------------------------------------------------
+  // Debug option
+  show: (it)=>{
+    if (debug){
+      show v: (it)=>{
+        place(box(width: 1pt, it, stroke: olive))
+        place(dx: 0.5em, text(size: 7pt, fill: olive, repr(it)))
+        it
+      }
+      // show place: set block(fill: luma(95%))
+      set page(background: {
+        place(
+          dx: 5cm,
+          dy: 5cm,
+          {
+            rect(
+              width: 100% - 10cm,
+              height: 100% - 11.25cm,
+              stroke: 0.1pt
+            )
+          }
+        )
+      })
+      show link: set text(stroke: eastern)
+      show cite: set text(stroke: eastern)
+      show ref: set text(stroke: eastern)
+      show footnote: box.with(stroke: eastern)
+      show math.equation.where(block: true): block.with(stroke: olive)
+      // show box: set box(stroke: 1pt + olive)
+      // show block: set block(stroke: 1pt + olive)
+      it
+    } else {
+      it
+    }
+  }
+
   // --------------------------------------------------------------------------
   // Text
   set text(size: 9pt, weight: 450)
@@ -19,20 +60,47 @@
   // Page
   set page(margin: (x:5cm, top:5cm, bottom: 6.25cm))
   set page(header-ascent: 1.5em)
-  set page(header: context{
-    set text(size: 7pt)
-    if here().page() > 1 {
-      if (calc.even(here().page())){
-        text[#here().page()]
-        h(1fr)
-        authors.map(it=>it.name).join(", ", last: " and ")
-      } else {
-        text(title)
-        h(1fr)
-        text[#here().page()]
+  set page(
+    header: context{
+      set text(size: 7pt)
+      if debug {
+        place(
+          rect(width: 100%, height: 100%, stroke: 0.1pt)
+        )
       }
+      if here().page() > 1 {
+        if (calc.even(here().page())){
+          text[#here().page()]
+          h(1fr)
+          authors.map(it=>it.name).join(", ", last: " and ")
+        } else {
+          text(title)
+          h(1fr)
+          text[#here().page()]
+        }
+      }
+    },
+    footer: if debug {
+      place(
+        rect(width: 100%, height: 100%, stroke: 0.1pt)
+      )
+    },
+    background: if debug {
+      if (frame != none){
+        place(rect(width: 100%, height: 100%, stroke: frame))
+      }
+      place(dy: 5cm, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
+      place(dy: 5cm, right, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
+      place(dy: 5cm, dx: 5cm, rect(width: 100%-10cm, height: 100% - 11.25cm, stroke: 0.1pt))
+    },
+    foreground: if printer-test {
+      place(right, pad(1cm,square-printer-test(size: 1em)))
+      place(left , pad(1cm,gradient-printer-test()))
+
+      place(right+bottom, pad(1cm,circular-printer-test(size: 2cm)))
+      place(left+bottom , pad(1cm,crosshair-printer-test(size: 1em)))
     }
-  })
+  )
   
   // --------------------------------------------------------------------------
   // Headings
@@ -132,9 +200,12 @@
   )
 
   if (abstract != none){
-    strong[Abstract]
-    h(weak: true, 0.5em)
-    // h(0.5em)
+    strong({
+      [Abstract]
+      h(0.25em)
+      sym.dash.em
+    })
+    h(weak: true, 0.25em)
     abstract
   }
 
