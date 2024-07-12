@@ -24,7 +24,7 @@
   ),
   abstract: lorem(75),
   // debug: true,
-  frame: 0.25pt
+  frame: 1pt
 )
 
 = Section Heading
