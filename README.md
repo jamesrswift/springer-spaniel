@@ -39,35 +39,37 @@ This is an loose recreation of the _Springer Contributed Chapter_ LaTeX template
 These instructions will get you a copy of the project up and running on the typst web app. Perhaps a short code example on importing the package and a very simple teaser usage.
 
 ```typ
-#import "@preview/my-package:0.1.0": *
+#import "@preview/springer-spaniel:0.1.0"
+#import springer-spaniel.ctheorems: * // provides "proof", "theorem", "lemma"
 
-#show: my-show-rule.with()
-#my-func()
+#show: springer-spaniel.template(
+  title: [Contribution Title],
+  authors: (
+    (
+      name: "Name of First Author",
+      institute: "Name",
+      address: "Address of Institute",
+      email: "name@email.address"
+    ),
+    // ... and so on
+  ),
+  abstract: lorem(75),
+
+  // debug: true, // Highlights structural elements and links
+  // frame: 1pt, // A border around the page for white on white display
+  // printer-test: true, // Suitably placed CMYK printer tests
+)
+
+= Section Heading
+== Subsection Heading
+=== Subsubsection Heading
+==== Paragraph Heading
+===== Subparagraph Heading
 ```
 
-### Installation
+### Local Installation
 
-A step by step guide that will tell you how to get the development environment up and running. This should example how to clone the repo and where to (maybe a link to the typst documentation on it), along with any pre-requisite software and installation steps.
-
-```
-$ First step
-$ Another step
-$ Final step
-```
-
-## Usage
-
-A more in-depth description of usage. Any template arguments? A complicated example that showcases most if not all of the functions the package provides? This is also an excellent place to signpost the manual.
-
-```typ
-#import "@preview/my-package:0.1.0": *
-
-#let my-complicated-example = ...
-```
-
-## Additional Documentation and Acknowledgments
-
-* Project folder on server:
-* Confluence link:
-* Asana board:
-* etc...
+To install this project locally, follow the steps below;
++ Install Just
++ Clone repository
++ In a bash compatible shell, `just install-preview`

@@ -8,9 +8,8 @@ authors = ["James R. Swift",]
 license = "Unlicense"
 description = "A loose recreation of the Springer Contributed Chapter template on Overleaf"
 repository = "https://github.com/JamesxX/springer-spaniel"
-keywords = []
-categories = []
-disciplines = []
+categories = ["book", "report"]
+disciplines = ["chemistry", "physics", "mathematics"]
 exclude = [
 	".github",
 	"docs",
