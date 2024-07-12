@@ -134,6 +134,7 @@
   // Figures
   set figure(supplement: [Fig.])
   set figure(placement: auto, gap: 1em)
+  show figure.caption: set text(size: 8pt)
   show figure.where(placement: auto): set place(clearance: 1.5em)
   show figure.where(kind: table): set figure(supplement: [Table])
   
