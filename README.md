@@ -1,7 +1,16 @@
-# The `my-package` Package
+# The `springer-spaniel` Package
 <div align="center">Version 0.1.0</div>
 
 A short description about the project and/or client.
+
+## Media
+
+<p align="center">
+  <img alt="Light" src="./thumbnails/1.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="./thumbnails/2.png" width="45%">
+</p>
+
 
 ## Template adaptation checklist
 
