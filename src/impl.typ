@@ -62,7 +62,7 @@
   // --------------------------------------------------------------------------
   // Figures
   set figure(supplement: [Fig.])
-  set figure(placement: auto, gap: 0.5em)
+  set figure(placement: auto, gap: 1em)
   show figure.where(placement: auto): set place(clearance: 1em)
   show figure.where(kind: table): set figure(supplement: [Table])
   

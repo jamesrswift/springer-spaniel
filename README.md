@@ -5,10 +5,9 @@ A short description about the project and/or client.
 
 ## Media
 
-<p align="right">
+<p align="center">
+  &nbsp; &nbsp; &nbsp; &nbsp;
   <img alt="Light" src="./thumbnails/1.png" width="45%" style="border: 1px solid #555;">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  
 </p>
 <p align="center">
 <img alt="Dark" src="./thumbnails/2.png" width="45%" style="border: 1px solid #555;">
@@ -18,6 +17,12 @@ A short description about the project and/or client.
 <p align="center">
   <img alt="Dark" src="./thumbnails/4.png" width="45%" style="border: 1px solid #555;">
   &nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="./thumbnails/5.png" width="45%" style="border: 1px solid #555;">
+</p>
+<p align="center">
+  <img alt="Dark" src="./thumbnails/6.png" width="45%" style="border: 1px solid #555;">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="./thumbnails/7.png" width="45%" style="border: 1px solid #555;">
 </p>
 
 

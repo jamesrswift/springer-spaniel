@@ -149,4 +149,65 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(50)
 
+#lorem(75)
+
+#figure(
+  caption: [Please write your table caption here],
+  springer-spaniel.dining-table.make(
+    columns: (
+      (
+        header: [Classes],
+        key: "class",
+        gutter: 0.5em,
+      ),
+      (
+        header: [Subclass],
+        key: "subclass",
+        gutter: 0.5em,
+      ),
+      (
+        header: [Length],
+        key: "length",
+        gutter: 0.5em,
+      ),
+      (
+        header: [Action Mechanism],
+        key: "mechanism",
+        gutter: 0.5em,
+        width: 1fr,
+      ),
+    ),
+    data: (
+      (
+        class: [Translation],
+        subclass: [mRNA] + springer-spaniel.dining-table.note.make[Table foot note (with suberscript)],
+        length: [22 (19--25)],
+        mechanism: [Translation repression, mRNA cleavage]
+      ),
+      (
+        class: [Translation],
+        subclass: [mRNA cleavage],
+        length: [21],
+        mechanism: [mRNA cleavage]
+      ),
+      (
+        class: [Translation],
+        subclass: [mRNA],
+        length: [21],
+        mechanism: [mRNA cleavage]
+      ),
+      (
+        class: [Translation],
+        subclass: [mRNA],
+        length: [21],
+        mechanism: [Histone and DNA modification]
+      ),
+    )
+  )
+)
+
+#lorem(40)
+
+#lorem(120)
+
 #bibliography("sample.bib", style: "springer-mathphys")
