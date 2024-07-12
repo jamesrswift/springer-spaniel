@@ -49,7 +49,9 @@ Instead of simply listing headings of different levels we recommend to let every
 ));h(-8.0pt)
 })
 
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the #LaTeX automatism for all your cross-references and citations.
+#show "LaTeX": LaTeX
+
+Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations.
 
 Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
 
@@ -69,7 +71,7 @@ abs(gradient_alpha^mu (y)) & <= 1/(d - a) integral abs(gradient 1/( abs(𝜉 - y
 $
 
 == Subsection Heading <sec:2.1>
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LATEX automatism for all your cross-references and citations as has already been described in @sec:2.
+Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.
 
 #quote[
   Please do not use quotation marks when quoting texts! Simply use the `quote` environment -- it will automatically be rendered in line with the preferred layout.
@@ -108,12 +110,12 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
   - Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
 - Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
 
-#lorem(75)
+#lorem(75) @einstein
 
 #theorem("Euclid")[There are infinitely many primes.] <euclid>
 
 #lemma[
- If $n$ divides both $x$ and $y$, it also divides $x - y$.
+ If $n$ divides both $x$ and $y$, it also divides $x - y$. @latexcompanion @knuthwebsite
 ]
 
 #corollary[
@@ -123,3 +125,5 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 #proof([of @euclid])[
   Suppose to the contrary that $p_1, p_2, dots, p_n$ is a finite enumeration of all primes. Set $P = p_1 p_2 dots p_n$. Since $P + 1$ is not in our list, it cannot be prime. Thus, some prime factor $p_j$ divides $P + 1$. Since $p_j$ also divides $P$, it must divide the difference $(P + 1) - P = 1$, a contradiction.
 ]
+
+#bibliography("sample.bib", style: "springer-mathphys")
