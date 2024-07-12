@@ -2,6 +2,8 @@
 #import springer-spaniel.ctheorems: *
 #import springer-spaniel.gentle-clues: *
 
+#set text(font: "Linux Libertine", fallback: false)
+
 #import "@preview/physica:0.9.3": *
 
 #show: springer-spaniel.template(
@@ -150,6 +152,8 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(50)
 
+#springer-spaniel.asterism.paragraph
+
 #lorem(50)
 
 #lorem(75)
@@ -212,8 +216,6 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 )
 
 #lorem(40)
-
-#springer-spaniel.asterism.paragraph
 
 #lorem(120)
 

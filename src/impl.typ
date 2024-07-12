@@ -13,6 +13,7 @@
   set block(spacing: 1em)
   set par(justify: true, first-line-indent: 1.5em)
   show par: set block(spacing: 0.65em)
+  show par: set align(left)
 
   // --------------------------------------------------------------------------
   // Page
@@ -55,7 +56,7 @@
   set footnote.entry(
     indent: 0em, 
     separator: line(length: 25%, stroke: 0.75pt), 
-    gap: 0.65em
+    // gap: 0.65em
   )
   show footnote.entry: set text(7.25pt)
 
@@ -68,9 +69,9 @@
   
   set figure.caption(position: bottom)
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.caption: set align(left)
+  // show figure.caption: set align(left)
   show figure.caption: set par(first-line-indent: 0em)
-  show figure: set align(left)
+  // show figure: set align(left)
   // show figure.caption: (it) => [
   //   *#it.supplement #it.counter.display()*#it.separator;#it.body
   // ]
