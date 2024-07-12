@@ -38,5 +38,10 @@ uninstall: (remove "@local")
 # uninstalls the library from the "@preview" prefix (for pre-release testing)
 uninstall-preview: (remove "@preview")
 
+# Create and shrink thumbnails
+thumbnails:
+  typst c template/main.typ thumbnails/{n}.png --root ./ --font-path ./
+  oxipng -o 4 --strip safe --alpha thumbnails/*.png
+
 # run ci suite
 ci: test doc
