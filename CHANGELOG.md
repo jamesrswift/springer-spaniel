@@ -1,13 +1,13 @@
-# [unreleased](https://github.com/jamesxx/springer-spaniel/releases/tags/)
-## Added
+# CHANGELOG
 
-## Removed
+## [unreleased](https://github.com/jamesxx/springer-spaniel/releases/tags/)
 
-## Changed
+### Added
 
-## Migration Guide from v0.1.X
+### Removed
+
+### Changed
 
 ---
-
 # [v0.1.0](https://github.com/jamesxx/springer-spaniel/releases/tags/v0.1.0)
 Initial Release
