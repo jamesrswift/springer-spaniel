@@ -5,7 +5,7 @@
 #import "@preview/physica:0.9.3": *
 
 #show: springer-spaniel.template(
-  title: [Gas Chromatography -- Mass Spectrometry],
+  title: [Contribution Title],
   authors: (
     (
       name: "Name of First Author",
@@ -83,7 +83,7 @@ Instead of simply listing headings of different levels we recommend to let every
 ]
 
 === Subsubsection Heading
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.1, see also 
+Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.1, see also @fig:full
 #footnote[
   If you copy text passages, figures, or tables from other works, you must obtain _permission_ from the copyright holder (usually the original publisher). Please enclose the signed permission with the manuscript. The sources permission to print must be acknowledged either in the captions, as footnotes or in a separate section of the book.
 ]
@@ -109,9 +109,10 @@ In order to avoid simply listing headings of different levels we recommend to le
 also Fig. 2.
 For unnumbered list we recommend to use the itemize environment -- it will automatically be rendered in line with the preferred layout.
 
-#place(float: true, bottom, block(
-  stroke: 1pt, height: 5cm, width: 100%
-))
+#figure(
+  caption: [If the width of the figure is less than 7.8 cm use the `sidecaption` command to flush the cpation on the left side of the page. If the figure is positioned at the top of the page, align the subcaption to the top of the figure -- to achieve this, you simply need to use the optional argument [t] with the `sidecaption` command],
+  block(stroke: 1pt, height: 5cm, width: 100%)
+) <fig:full>
 
 - Livelihood and survival mobility are oftentimes coutcomes of uneven socioeco-nomic development, cf. Table 1
   - Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
@@ -119,6 +120,14 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 - Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
 
 #lorem(75) @einstein
+
+#springer-spaniel.sidecaption(
+  figure(
+    caption: [If the width of the figure is less than 7.8 cm use the `sidecaption` command to flush the cpation on the left side of the page. If the figure is positioned at the top of the page, align the subcaption to the top of the figure -- to achieve this, you simply need to use the optional argument [t] with the `sidecaption` command],
+    block(stroke: 1pt, height: 5cm, width: 100%)
+  ),
+  label: <fig:side>
+)
 
 #theorem("Euclid")[There are infinitely many primes.] <euclid>
 

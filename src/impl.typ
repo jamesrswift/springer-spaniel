@@ -60,8 +60,18 @@
   show footnote.entry: set text(7.25pt)
 
   // --------------------------------------------------------------------------
-  // Supplements
+  // Figures
   set figure(supplement: [Fig.])
+  set figure(placement: auto, gap: 0.5em)
+  show figure.where(placement: auto): set place(clearance: 1em)
+  show figure.where(kind: table): set figure(supplement: [Table])
+  
+  set figure.caption(position: bottom)
+  show figure.where(kind: table): set figure.caption(position: top)
+  show figure.caption: (it) => {
+    set par(first-line-indent: 0em)
+    align(left)[*#it.supplement #it.counter.display()*#it.separator;#it.body]
+  }
 
   // --------------------------------------------------------------------------
   // Lists
@@ -125,4 +135,17 @@
   body
   // --------------------------------------------------------------------------
 
+}
+
+
+#let sidecaption(body, direction: ltr, label: none) = {
+  show figure: (it)=>{
+    stack(
+      spacing: 1em,
+      dir: direction,
+      block(width: 33% - 0.5em, it.caption), 
+      block(width: 67% - 0.5em, it.body)
+    )
+  }
+  place(float: true, auto, [#body#label])
 }
