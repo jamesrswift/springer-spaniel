@@ -1,4 +1,6 @@
 
+#import "package/ctheorems.typ": thmrules
+
 #let template(
   title: [Contribution Title],
   authors: (),
@@ -28,7 +30,11 @@
   set heading(numbering: "1.1", offset: 0)
   show heading: set block(above: 3em, spacing: 1.5em)
   show heading.where(level: 4): set block(above: 1.5em, below: 1em)
+  show heading.where(level:4): set text(weight: 450)
+  show heading.where(level: 4): set heading(numbering: none, outlined: false)
   show heading.where(level: 5): set block(above: 1.5em, below: 1em)
+  show heading.where(level: 5): set text(weight: 450, style: "italic")
+  show heading.where(level: 5): set heading(numbering: none, outlined: false)
   set heading(supplement: [Sect.])
 
   set math.equation(numbering: "(1)")
@@ -38,6 +44,13 @@
   show footnote.entry: set text(7.25pt)
 
   set figure(supplement: [Fig.])
+
+  show enum: set block(spacing: 1.5em)
+  show list: set block(spacing: 1.5em)
+
+  show: thmrules
+
+  // BODY
 
   v(2cm)
 
