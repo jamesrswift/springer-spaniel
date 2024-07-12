@@ -85,13 +85,15 @@
         rect(width: 100%, height: 100%, stroke: 0.1pt)
       )
     },
-    background: if debug {
+    background: {
       if (frame != none){
         place(rect(width: 100%, height: 100%, stroke: frame))
       }
-      place(dy: 5cm, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
-      place(dy: 5cm, right, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
-      place(dy: 5cm, dx: 5cm, rect(width: 100%-10cm, height: 100% - 11.25cm, stroke: 0.1pt))
+      if debug {
+        place(dy: 5cm, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
+        place(dy: 5cm, right, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
+        place(dy: 5cm, dx: 5cm, rect(width: 100%-10cm, height: 100% - 11.25cm, stroke: 0.1pt))
+      }
     },
     foreground: if printer-test {
       place(right, pad(1cm,square-printer-test(size: 1em)))
