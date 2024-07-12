@@ -20,11 +20,16 @@
       email: "name@email.address"
     )
   ),
-  abstract: [
-    Each chapter should be preceded by an abstract (no more than 200 words) that summarizes the content. The abstract will appear online at #box[www.SpringerLink.com] and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter.
+  abstract: {
+    lorem(75)
+    parbreak()
+    lorem(75)
+  },
+  // abstract: [
+  //   Each chapter should be preceded by an abstract (no more than 200 words) that summarizes the content. The abstract will appear online at #box[www.SpringerLink.com] and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter.
 
-    Please use the `starred` version of the abstract command for typesetting the text of the online abstracts (cf. source file of this chapter template abstract) and include them with the source files of your manuscript. Use the plain abstract command if the abstract is also to appear in the printed version of the book.
-  ]
+  //   Please use the `starred` version of the abstract command for typesetting the text of the online abstracts (cf. source file of this chapter template abstract) and include them with the source files of your manuscript. Use the plain abstract command if the abstract is also to appear in the printed version of the book.
+  // ]
 )
 
 = Section Heading
@@ -97,6 +102,11 @@ described in @sec:2.
 
 Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
 
+#figure(
+  caption: [If the width of the figure is less than 7.8 cm use the `sidecaption` command to flush the cpation on the left side of the page. If the figure is positioned at the top of the page, align the subcaption to the top of the figure -- to achieve this, you simply need to use the optional argument [t] with the `sidecaption` command],
+  block(stroke: 0.75pt, height: 5cm, width: 100%)
+) <fig:full>
+
 For typesetting numbered lists we recommend to use the enumerate environment -- it will automatically rendered in line with the preferred layout.
 
 + Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
@@ -109,10 +119,13 @@ In order to avoid simply listing headings of different levels we recommend to le
 also Fig. 2.
 For unnumbered list we recommend to use the itemize environment -- it will automatically be rendered in line with the preferred layout.
 
-#figure(
-  caption: [If the width of the figure is less than 7.8 cm use the `sidecaption` command to flush the cpation on the left side of the page. If the figure is positioned at the top of the page, align the subcaption to the top of the figure -- to achieve this, you simply need to use the optional argument [t] with the `sidecaption` command],
-  block(stroke: 1pt, height: 5cm, width: 100%)
-) <fig:full>
+#springer-spaniel.sidecaption(
+  figure(
+    caption: [If the width of the figure is less than 7.8 cm use the `sidecaption` command to flush the cpation on the left side of the page. If the figure is positioned at the top of the page, align the subcaption to the top of the figure -- to achieve this, you simply need to use the optional argument [t] with the `sidecaption` command],
+    block(stroke: 0.75pt, height: 5cm, width: 100%)
+  ),
+  label: <fig:side>
+)
 
 - Livelihood and survival mobility are oftentimes coutcomes of uneven socioeco-nomic development, cf. Table 1
   - Livelihood and survival mobility are oftentimes outcomes of uneven socioeconomic development.
@@ -121,15 +134,11 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #lorem(75) @einstein
 
-#springer-spaniel.sidecaption(
-  figure(
-    caption: [If the width of the figure is less than 7.8 cm use the `sidecaption` command to flush the cpation on the left side of the page. If the figure is positioned at the top of the page, align the subcaption to the top of the figure -- to achieve this, you simply need to use the optional argument [t] with the `sidecaption` command],
-    block(stroke: 1pt, height: 5cm, width: 100%)
-  ),
-  label: <fig:side>
-)
-
 #theorem("Euclid")[There are infinitely many primes.] <euclid>
+
+#proof([of @euclid])[
+  Suppose to the contrary that $p_1, p_2, dots, p_n$ is a finite enumeration of all primes. Set $P = p_1 p_2 dots p_n$. Since $P + 1$ is not in our list, it cannot be prime. Thus, some prime factor $p_j$ divides $P + 1$. Since $p_j$ also divides $P$, it must divide the difference $(P + 1) - P = 1$, a contradiction.
+]
 
 #lemma[
  If $n$ divides both $x$ and $y$, it also divides $x - y$. @latexcompanion @knuthwebsite
@@ -137,10 +146,6 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 
 #corollary[
   if $n$ divides two consecutive natural numbers, then $n = 1$.
-]
-
-#proof([of @euclid])[
-  Suppose to the contrary that $p_1, p_2, dots, p_n$ is a finite enumeration of all primes. Set $P = p_1 p_2 dots p_n$. Since $P + 1$ is not in our list, it cannot be prime. Thus, some prime factor $p_j$ divides $P + 1$. Since $p_j$ also divides $P$, it must divide the difference $(P + 1) - P = 1$, a contradiction.
 ]
 
 #lorem(50)

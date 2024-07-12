@@ -108,11 +108,6 @@
     block(text(authors.map(it=>it.name).join(", ", last: " and ")))
   }
   v(3.5cm)
-  if (abstract != none){
-    strong[Abstract]
-    abstract
-  }
-
   // --------------------------------------------------------------------------
   // Main body
   place(
@@ -133,6 +128,13 @@
       ).join(parbreak())
     }
   )
+
+  if (abstract != none){
+    strong[Abstract]
+    h(weak: true, 0.5em)
+    // h(0.5em)
+    abstract
+  }
 
   
   body
