@@ -6,10 +6,16 @@ A short description about the project and/or client.
 ## Media
 
 <p align="center">
-  <img alt="Light" src="./thumbnails/1.png" width="45%">
+  <img alt="Light" src="./thumbnails/1.png" width="45%" style="border: 1px solid #555;">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="./thumbnails/2.png" width="45%">
+  <img alt="Dark" src="./thumbnails/2.png" width="45%" style="border: 1px solid #555;">
 </p>
+<p align="center">
+  <img alt="Light" src="./thumbnails/3.png" width="45%" style="border: 1px solid #555;">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="./thumbnails/4.png" width="45%" style="border: 1px solid #555;">
+</p>
+
 
 
 ## Template adaptation checklist
