@@ -9,5 +9,7 @@
 ### Changed
 
 ---
-# [v0.1.0](https://github.com/jamesxx/springer-spaniel/releases/tags/v0.1.0)
+
+## [v0.1.0](https://github.com/jamesxx/springer-spaniel/releases/tags/v0.1.0)
+
 Initial Release
