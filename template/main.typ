@@ -1,5 +1,7 @@
 #import "../src/lib.typ" as springer-spaniel
 #import springer-spaniel.ctheorems: *
+#import springer-spaniel.gentle-clues: *
+
 #import "@preview/physica:0.9.3": *
 
 #show: springer-spaniel.template(
@@ -61,7 +63,10 @@ $
   a times b = c ,
 $
 
-however, for multiline equations we recommend to use the `eqnarray` environment#footnote[In physics texts please activate the class option `vecphys` to depict your vectors in #text(weight: "black", style: "italic")[boldface-italic] type - as is customary for a wide range of physical subjects].
+however, for multiline equations we recommend to use the `eqnarray` environment.
+#footnote[
+  In physics texts please activate the class option `vecphys` to depict your vectors in #strong(emph[boldface-italic]) type - as is customary for a wide range of physical subjects
+]
 
 $
 abs(gradient_alpha^mu (y)) & <= 1/(d - a) integral abs(gradient 1/( abs(𝜉 - y)^(d-alpha))) dd(mu (𝜉))
@@ -78,13 +83,16 @@ Instead of simply listing headings of different levels we recommend to let every
 ]
 
 === Subsubsection Heading
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the #LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.1, see also #footnote[If you copy text passages, figures, or tables from other works, you must obtain _permission_ from the copyright holder (usually the original publisher). Please enclose the signed permission with the manuscript. The sources permission to print must be acknowledged either in the captions, as footnotes or in a separate section of the book.]
+Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the LaTeX automatism for all your cross-references and citations as has already been described in @sec:2.1, see also 
+#footnote[
+  If you copy text passages, figures, or tables from other works, you must obtain _permission_ from the copyright holder (usually the original publisher). Please enclose the signed permission with the manuscript. The sources permission to print must be acknowledged either in the captions, as footnotes or in a separate section of the book.
+]
 
 Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
 
 ==== Paragraph Heading
 Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Further on please use the
-#LaTeX automatism for all your cross-references and citations as has already been
+LaTeX automatism for all your cross-references and citations as has already been
 described in @sec:2.
 
 Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
@@ -125,5 +133,11 @@ For unnumbered list we recommend to use the itemize environment -- it will autom
 #proof([of @euclid])[
   Suppose to the contrary that $p_1, p_2, dots, p_n$ is a finite enumeration of all primes. Set $P = p_1 p_2 dots p_n$. Since $P + 1$ is not in our list, it cannot be prime. Thus, some prime factor $p_j$ divides $P + 1$. Since $p_j$ also divides $P$, it must divide the difference $(P + 1) - P = 1$, a contradiction.
 ]
+
+#lorem(50)
+
+#info[Hello World]
+
+#lorem(50)
 
 #bibliography("sample.bib", style: "springer-mathphys")

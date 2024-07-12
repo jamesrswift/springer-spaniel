@@ -1,5 +1,6 @@
 
 #import "package/ctheorems.typ": thmrules
+#import "package/gentle-clues.typ": gentle-clues
 
 #let template(
   title: [Contribution Title],
@@ -9,8 +10,9 @@
   // --------------------------------------------------------------------------
   // Text
   set text(size: 9pt, weight: 450)
-  set block(spacing: 0.65em)
+  set block(spacing: 1em)
   set par(justify: true, first-line-indent: 1.5em)
+  show par: set block(spacing: 0.65em)
 
   // --------------------------------------------------------------------------
   // Page
@@ -79,7 +81,7 @@
   // --------------------------------------------------------------------------
   // Packages
   show: thmrules
-  
+  show: gentle-clues
 
   // --------------------------------------------------------------------------
   // Title

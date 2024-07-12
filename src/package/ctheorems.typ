@@ -3,7 +3,7 @@
 #let thmrules = thmrules.with(qed-symbol: $square.stroked$)
 
 #let thmbox = thmbox.with(
-  padding: (y: 0.4em),
+  padding: (y: 0.25em),
   inset: 0pt, 
   radius: 0pt, 
   breakable: true,
