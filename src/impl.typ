@@ -2,6 +2,7 @@
 #import "package/ctheorems.typ": thmrules
 #import "package/gentle-clues.typ": gentle-clues
 #import "@preview/chromo:0.1.0": square-printer-test, gradient-printer-test, circular-printer-test, crosshair-printer-test
+#import "package/drafting.typ" as drafting
 
 #let template(
   title: [Contribution Title],
@@ -168,7 +169,7 @@
   // Packages
   show: thmrules
   show: gentle-clues
-
+  drafting.set-page-properties()
   // --------------------------------------------------------------------------
   // Title
   v(2cm)
