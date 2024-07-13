@@ -38,7 +38,7 @@ This section tests the template styling of the supported `board-n-pieces` packag
   figure(
     caption: lorem(50),
     board(
-      fen("r4rk1/pp2Bpbp/1qp3p1/8/2BP2b1/Q1n2N2/P4PPP/3RK2R"),
+      fen("3k4/7R/8/2PK4/8/8/8/6r1 b - - 0 1"),
       highlighted-squares: "c7 c6 h6",
       arrows: ("d8 c8", "d8 c7", "g1 g6", "h7 h6"),
     )
