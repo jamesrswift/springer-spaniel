@@ -1,9 +1,10 @@
 
 #import "package/ctheorems.typ": thmrules
 #import "package/gentle-clues.typ": gentle-clues
-#import "@preview/chromo:0.1.0": square-printer-test, gradient-printer-test, circular-printer-test, crosshair-printer-test
 #import "package/drafting.typ" as drafting
 #import "package/codly.typ" as codly
+
+#import "models/debug.typ" as debug-models
 
 #let template(
   title: [Contribution Title],
@@ -23,20 +24,6 @@
         place(dx: 0.5em, text(size: 7pt, fill: olive, repr(it)))
         it
       }
-      // show place: set block(fill: luma(95%))
-      set page(background: {
-        place(
-          dx: 5cm,
-          dy: 5cm,
-          {
-            rect(
-              width: 100% - 10cm,
-              height: 100% - 11.25cm,
-              stroke: 0.1pt
-            )
-          }
-        )
-      })
       show link: set text(stroke: eastern)
       show cite: set text(stroke: eastern)
       show ref: set text(stroke: eastern)
@@ -65,11 +52,7 @@
   set page(
     header: context{
       set text(size: 7pt)
-      if debug {
-        place(
-          rect(width: 100%, height: 100%, stroke: 0.1pt)
-        )
-      }
+      if debug {debug-models.frame()}
       if here().page() > 1 {
         if (calc.even(here().page())){
           text[#here().page()]
@@ -82,28 +65,12 @@
         }
       }
     },
-    footer: if debug {
-      place(
-        rect(width: 100%, height: 100%, stroke: 0.1pt)
-      )
-    },
+    footer: if debug {debug-models.frame()},
     background: {
-      if (frame != none){
-        place(rect(width: 100%, height: 100%, stroke: frame))
-      }
-      if debug {
-        place(dy: 5cm, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
-        place(dy: 5cm, right, rect(width: 4.5cm, height: 100% - 11.25cm, stroke: 0.1pt))
-        place(dy: 5cm, dx: 5cm, rect(width: 100%-10cm, height: 100% - 11.25cm, stroke: 0.1pt))
-      }
+      if frame != none {debug-models.frame(stroke: frame)}
+      if debug {debug-models.horizontal-frames}
     },
-    foreground: if printer-test {
-      place(right, pad(1cm,square-printer-test(size: 1em)))
-      place(left , pad(1cm,gradient-printer-test()))
-
-      place(right+bottom, pad(1cm,circular-printer-test(size: 2cm)))
-      place(left+bottom , pad(1cm,crosshair-printer-test()))
-    }
+    foreground: if printer-test {debug-models.printer-test}
   )
   
   // --------------------------------------------------------------------------
