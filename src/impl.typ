@@ -102,7 +102,7 @@
       place(left , pad(1cm,gradient-printer-test()))
 
       place(right+bottom, pad(1cm,circular-printer-test(size: 2cm)))
-      place(left+bottom , pad(1cm,crosshair-printer-test(size: 1em)))
+      place(left+bottom , pad(1cm,crosshair-printer-test()))
     }
   )
   
