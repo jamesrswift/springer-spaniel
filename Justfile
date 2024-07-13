@@ -43,5 +43,8 @@ thumbnails:
   typst c template/main.typ thumbnails/{n}.png --root ./ --font-path ./
   oxipng -o 4 --strip safe --alpha thumbnails/*.png
 
+example:
+  typst c template/main.typ example.pdf --root ./ --font-path ./
+
 # run ci suite
-ci: test doc
+ci: test doc thumbnails example
