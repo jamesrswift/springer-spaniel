@@ -99,9 +99,10 @@ For typesetting numbered lists we recommend using the natively supported numbere
 #lorem(50) as has already been described in @sec:2.1, see also @fig:full.
 
 #springer-spaniel.sidecaption(
+  caption-width: 33%,
   figure(
     caption: [For smaller figures, which need not take up the full width of the page, this template provides a wrapper for `figure` called `sidecaption` which will move the caption to the left third of the page while the figure occupies the right two thirds.],
-    block(stroke: 0.75pt, height: 5cm, width: 100%)
+    block(stroke: 0.75pt, height: 4cm, width: 67%)
   ),
   label: <fig:side>
 )
