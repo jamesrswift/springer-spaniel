@@ -169,7 +169,8 @@
   // Packages
   show: thmrules
   show: gentle-clues
-  drafting.set-page-properties()
+  place(drafting.set-page-properties())
+   
   // --------------------------------------------------------------------------
   // Title
   v(2cm)
