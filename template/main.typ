@@ -3,8 +3,6 @@
 #import springer-spaniel.ctheorems: *
 #import springer-spaniel.gentle-clues: *
 
-#set text(font: "Linux Libertine", fallback: false)
-
 #import "@preview/physica:0.9.3": *
 
 #show: springer-spaniel.template(
