@@ -1,5 +1,4 @@
 #import "@preview/springer-spaniel:0.1.0" as springer-spaniel
-#import "../src/lib.typ" as springer-spaniel
 #import springer-spaniel.ctheorems: *
 #import springer-spaniel.gentle-clues: *
 
