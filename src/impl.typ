@@ -3,6 +3,7 @@
 #import "package/gentle-clues.typ": gentle-clues
 #import "@preview/chromo:0.1.0": square-printer-test, gradient-printer-test, circular-printer-test, crosshair-printer-test
 #import "package/drafting.typ" as drafting
+#import "package/codly.typ" as codly
 
 #let template(
   title: [Contribution Title],
@@ -170,6 +171,7 @@
   show: thmrules
   show: gentle-clues
   place(drafting.set-page-properties())
+  show: codly.codly-init.with()
    
   // --------------------------------------------------------------------------
   // Title
