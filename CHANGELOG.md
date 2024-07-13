@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [unreleased](https://github.com/jamesxx/springer-spaniel/releases/tags/)
+## [v0.1.1](https://github.com/jamesxx/springer-spaniel/releases/tags/v0.1.1)
 
 ### Added
 

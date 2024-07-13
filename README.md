@@ -1,5 +1,5 @@
 # The `springer-spaniel` Package
-<div align="center">Version 0.1.0</div>
+<div align="center">Version 0.1.1</div>
 
 This is an loose recreation of the _Springer Contributed Chapter_ LaTeX template on Overleaf. It aims to provide template-level support for commonly used packages so you don't have to choose between style and features. 
 
@@ -17,7 +17,7 @@ This is an loose recreation of the _Springer Contributed Chapter_ LaTeX template
 These instructions will get you a copy of the project up and running on the typst web app. Perhaps a short code example on importing the package and a very simple teaser usage.
 
 ```typ
-#import "@preview/springer-spaniel:0.1.0"
+#import "@preview/springer-spaniel:0.1.1"
 #import springer-spaniel.ctheorems: * // provides "proof", "theorem", "lemma"
 
 #show: springer-spaniel.template(
