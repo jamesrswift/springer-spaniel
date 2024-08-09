@@ -1,4 +1,4 @@
-#import "../../src/lib.typ" as springer-spaniel
+#import "/tests/preamble.typ": *
 
 #show: springer-spaniel.template(
   title: [Towards Swifter Interstellar Mail Delivery],

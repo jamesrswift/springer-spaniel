@@ -1,4 +1,4 @@
-#import "../../src/lib.typ" as springer-spaniel
+#import "/tests/preamble.typ": *
 #import springer-spaniel.drafting: *
 
 #show: springer-spaniel.template(

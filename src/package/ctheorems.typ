@@ -32,3 +32,5 @@
 ).with(numbering: "1.1")
 
 #let proof = thmproof("proof", "Proof").with(numbering: none)
+
+#let definition = thmbox("definition", "Definition")

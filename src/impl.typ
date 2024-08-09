@@ -43,7 +43,7 @@
   set block(spacing: 1em)
   set par(justify: true, first-line-indent: 1.5em)
   show par: set block(spacing: 0.65em)
-  // show par: set align(left)
+  show par: set align(left)
 
   // --------------------------------------------------------------------------
   // Page
